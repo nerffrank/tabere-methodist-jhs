@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/tabere-crest.png",
+    shortcut: "/tabere-crest.png",
   },
 };
 

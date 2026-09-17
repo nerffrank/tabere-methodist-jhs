@@ -27,7 +27,9 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Tabere Methodist JHS home">
-          <span className="brand-mark">TM</span>
+          <span className="brand-mark">
+            <img src="/tabere-crest.png" alt="" />
+          </span>
           <span>
             <strong>Tabere Methodist JHS</strong>
             <small>Atwima Nwabiagya North</small>
@@ -61,22 +63,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="School campus illustration">
-          <div className="sun" />
-          <div className="campus">
-            <div className="flag" />
-            <div className="roof" />
-            <div className="building">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="students">
-              <i />
-              <i />
-              <i />
-            </div>
+        <div className="hero-visual">
+          <img
+            src="/tabere-graduates.png"
+            alt="Tabere Methodist Junior High School graduates and staff"
+          />
+          <div className="photo-caption">
+            <span>Celebrating achievement</span>
+            <strong>Students, staff, and community leaders</strong>
           </div>
         </div>
       </section>
@@ -103,6 +97,17 @@ export default function Home() {
           students with the skills required to navigate a digital and rapidly
           changing world.
         </p>
+        <div className="leader-card">
+          <img
+            src="/tabere-crest.png"
+            alt="Tabere Methodist Junior High School crest"
+          />
+          <div>
+            <span>Headmaster</span>
+            <strong>Prince Owusu Asante</strong>
+            <a href="tel:+233549131522">+233 54 913 1522</a>
+          </div>
+        </div>
       </section>
 
       <section className="content-grid" id="about">
@@ -110,9 +115,10 @@ export default function Home() {
           <p className="eyebrow">About us</p>
           <h2>Built on discipline, hard work, and academic excellence</h2>
           <p>
-            Established to provide critical secondary-track basic education to
-            the Tabere suburb near Kumasi, the school continues to grow through
-            church, community, and local education partnerships.
+            Established to provide critical secondary-track basic education
+            northwest of Kumasi near the high-elevation areas of Barekese and
+            Tabere, the school continues to grow through church, community, and
+            local education partnerships.
           </p>
         </div>
         <div className="pillars">
@@ -152,6 +158,20 @@ export default function Home() {
             <span key={subject}>{subject}</span>
           ))}
         </div>
+        <figure className="study-highlight">
+          <img
+            src="/tabere-study-group.png"
+            alt="Tabere Methodist Junior High School students reading from a notebook"
+          />
+          <figcaption>
+            <span>Learning in action</span>
+            <strong>Reading, discussion, and peer support</strong>
+            <p>
+              Everyday classroom life is strengthened through guided study,
+              shared notes, and learners helping one another build confidence.
+            </p>
+          </figcaption>
+        </figure>
         <div className="feature-row">
           <article>
             <h3>ICT & Learning Tools</h3>
@@ -169,6 +189,16 @@ export default function Home() {
             </p>
           </article>
         </div>
+        <figure className="student-life">
+          <img
+            src="/tabere-students.png"
+            alt="Tabere Methodist Junior High School students celebrating together"
+          />
+          <figcaption>
+            Student life at Tabere Methodist JHS is shaped by confidence,
+            teamwork, and pride in the school community.
+          </figcaption>
+        </figure>
       </section>
 
       <section className="admissions" id="admissions">
@@ -219,15 +249,39 @@ export default function Home() {
         </div>
         <div className="contact-layout">
           <div className="contact-card">
+            <img
+              className="contact-crest"
+              src="/tabere-crest.png"
+              alt="Tabere Methodist Junior High School crest"
+            />
             <h3>School Location</h3>
             <p>
-              Tabere Suburb, Abrafo Kokobeng Newsite Road, Atwima Nwabiagya
-              North District, Ashanti Region, Ghana.
+              AK544 Abrafo Kokobeng Newsite Road, Akropon, Ghana.
+            </p>
+            <p>
+              Headmaster: Prince Owusu Asante
+              <br />
+              Phone: <a href="tel:+233549131522">+233 54 913 1522</a>
+            </p>
+            <p className="location-note">
+              Located northwest of the regional capital, Kumasi, near the
+              high-elevation areas of Barekese and Tabere.
             </p>
             <div className="map-panel">
-              <span>Map area</span>
-              <strong>Tabere, Ashanti Region</strong>
+              <iframe
+                title="Map showing Akropon near Tabere, Ghana"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-1.8%2C6.6%2C-1.5%2C6.9&layer=mapnik"
+                loading="lazy"
+              />
             </div>
+            <a
+              className="map-link"
+              href="https://www.openstreetmap.org/search?query=AK544%20Abrafo%20Kokobeng%20Newsite%20Road%2C%20Akropon%2C%20Ghana"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View larger map
+            </a>
           </div>
           <form className="inquiry-form">
             <label>
@@ -258,7 +312,7 @@ export default function Home() {
 
       <footer>
         <strong>Tabere Methodist Junior High School</strong>
-        <span>Excellence, faith, service, and community partnership.</span>
+        <span>Discipline and hard work. Call +233 54 913 1522.</span>
       </footer>
     </main>
   );

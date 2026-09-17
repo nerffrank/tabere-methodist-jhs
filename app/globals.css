@@ -76,16 +76,22 @@ main {
 
 .brand-mark {
   align-items: center;
-  background: var(--blue);
+  background: var(--white);
   border: 3px solid var(--gold);
   border-radius: 50%;
-  color: var(--white);
   display: inline-flex;
-  font-size: 0.8rem;
-  font-weight: 800;
   height: 46px;
   justify-content: center;
+  overflow: hidden;
+  padding: 3px;
   width: 46px;
+}
+
+.brand-mark img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .brand strong,
@@ -218,112 +224,52 @@ p {
 }
 
 .hero-visual {
-  aspect-ratio: 1 / 0.85;
-  min-height: 360px;
+  aspect-ratio: 1 / 0.82;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+  box-shadow: 0 28px 80px rgba(3, 19, 31, 0.34);
+  min-height: 390px;
+  overflow: hidden;
   position: relative;
 }
 
-.sun {
-  background: var(--gold);
-  border-radius: 50%;
-  box-shadow: 0 0 90px rgba(217, 179, 16, 0.42);
-  height: 118px;
-  position: absolute;
-  right: 8%;
-  top: 10%;
-  width: 118px;
-}
-
-.campus {
-  bottom: 7%;
-  height: 68%;
-  left: 3%;
-  position: absolute;
-  right: 3%;
-}
-
-.flag {
-  background: var(--gold);
-  height: 92px;
-  left: 12%;
-  position: absolute;
-  top: 0;
-  width: 12px;
-}
-
-.flag::after {
-  background: var(--green);
+.hero-visual::after {
+  background: linear-gradient(180deg, transparent 45%, rgba(6, 22, 34, 0.72));
   content: "";
-  height: 34px;
-  left: 12px;
+  inset: 0;
   position: absolute;
-  top: 0;
-  width: 82px;
 }
 
-.roof {
-  border-bottom: 82px solid var(--gold);
-  border-left: 210px solid transparent;
-  border-right: 210px solid transparent;
-  bottom: 158px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 0;
-}
-
-.building {
-  background: #f7f1dc;
-  border: 8px solid rgba(18, 34, 53, 0.25);
-  border-radius: 8px 8px 0 0;
-  bottom: 0;
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(4, 1fr);
-  height: 170px;
-  left: 50%;
-  max-width: 480px;
-  padding: 34px;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 86%;
-}
-
-.building span {
-  background: var(--blue);
-  border-radius: 5px 5px 0 0;
+.hero-visual img,
+.student-life img {
   display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
-.students {
-  align-items: end;
-  bottom: 8px;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  left: 0;
+.photo-caption {
+  bottom: 22px;
+  color: var(--white);
+  left: 22px;
   position: absolute;
-  right: 0;
+  right: 22px;
+  z-index: 2;
 }
 
-.students i {
-  background: var(--blue-2);
-  border-radius: 999px 999px 7px 7px;
+.photo-caption span {
+  color: var(--gold);
   display: block;
-  height: 46px;
-  position: relative;
-  width: 18px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
-.students i::before {
-  background: #5d3826;
-  border-radius: 50%;
-  content: "";
-  height: 20px;
-  left: -1px;
-  position: absolute;
-  top: -20px;
-  width: 20px;
+.photo-caption strong {
+  display: block;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.2;
 }
 
 .ticker {
@@ -370,6 +316,57 @@ p {
 .welcome p:last-child {
   color: var(--ink);
   font-size: clamp(1.05rem, 2vw, 1.22rem);
+}
+
+.leader-card {
+  align-items: center;
+  align-self: start;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+}
+
+.leader-card img {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  height: 82px;
+  object-fit: contain;
+  padding: 6px;
+  width: 82px;
+}
+
+.leader-card span,
+.leader-card strong,
+.leader-card a {
+  display: block;
+}
+
+.leader-card span {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.leader-card strong {
+  color: var(--blue);
+  font-size: 1.12rem;
+  margin-bottom: 4px;
+}
+
+.leader-card a,
+.contact-card a {
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
 }
 
 .section-heading {
@@ -437,8 +434,76 @@ p {
   padding: 16px;
 }
 
+.study-highlight {
+  align-items: stretch;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1fr);
+  margin: 24px 0 18px;
+  overflow: hidden;
+}
+
+.study-highlight img {
+  display: block;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.study-highlight figcaption {
+  align-self: center;
+  padding: clamp(24px, 4vw, 46px);
+}
+
+.study-highlight span {
+  color: var(--gold);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.study-highlight strong {
+  color: var(--blue);
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3.4vw, 2.7rem);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
 .feature-row {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.student-life {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  margin: 24px 0 0;
+  overflow: hidden;
+}
+
+.student-life img {
+  aspect-ratio: 16 / 9;
+}
+
+.student-life figcaption {
+  align-self: center;
+  color: var(--blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 3vw, 2.2rem);
+  line-height: 1.1;
+  padding: clamp(24px, 4vw, 44px);
 }
 
 .admissions {
@@ -461,32 +526,50 @@ p {
   margin-top: 34px;
 }
 
-.map-panel {
-  background:
-    linear-gradient(90deg, rgba(11, 60, 93, 0.12) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(11, 60, 93, 0.12) 1px, transparent 1px),
-    var(--mist);
-  background-size: 28px 28px;
+.contact-crest {
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 8px;
-  color: var(--blue);
-  display: grid;
+  display: block;
+  height: 96px;
+  margin-bottom: 18px;
+  object-fit: contain;
+  padding: 8px;
+  width: 96px;
+}
+
+.map-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
   margin-top: 24px;
   min-height: 250px;
-  place-items: center;
-  text-align: center;
+  overflow: hidden;
 }
 
-.map-panel span,
-.map-panel strong {
+.location-note {
+  border-left: 4px solid var(--gold);
+  color: var(--blue);
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-left: 14px;
+}
+
+.map-panel iframe {
+  border: 0;
   display: block;
+  height: 350px;
+  width: 100%;
 }
 
-.map-panel span {
-  color: var(--muted);
-  font-size: 0.82rem;
+.map-link {
+  color: var(--blue);
+  display: inline-block;
+  font-size: 0.92rem;
   font-weight: 800;
-  text-transform: uppercase;
+  margin-top: 12px;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
 }
 
 .inquiry-form {
@@ -563,8 +646,14 @@ footer span {
   }
 
   .admissions-grid,
-  .feature-row {
+  .feature-row,
+  .study-highlight,
+  .student-life {
     grid-template-columns: 1fr;
+  }
+
+  .study-highlight img {
+    max-height: 520px;
   }
 }
 
@@ -594,14 +683,18 @@ footer span {
   .subject-grid {
     grid-template-columns: 1fr;
   }
-
-  .roof {
-    border-left-width: 150px;
-    border-right-width: 150px;
+  .hero-visual {
+    aspect-ratio: 4 / 5;
+    min-height: 380px;
   }
 
-  .building {
-    gap: 10px;
-    padding: 26px 20px;
+  .hero-visual img {
+    object-position: 50% 50%;
+  }
+
+  .photo-caption {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
   }
 }
