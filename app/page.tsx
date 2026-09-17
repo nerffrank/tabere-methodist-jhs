@@ -6,6 +6,8 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
+export const dynamic = "force-static";
+
 const coreSubjects = [
   "Mathematics",
   "Integrated Science",
@@ -22,13 +24,16 @@ const announcements = [
   "School office hours: Monday to Friday, 7:30 AM to 3:30 PM.",
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const assetPath = (path: string) => `${basePath}${path}`;
+
 export default function Home() {
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Tabere Methodist JHS home">
           <span className="brand-mark">
-            <img src="/tabere-crest.png" alt="" />
+            <img src={assetPath("/tabere-crest.png")} alt="" />
           </span>
           <span>
             <strong>Tabere Methodist JHS</strong>
@@ -65,7 +70,7 @@ export default function Home() {
 
         <div className="hero-visual">
           <img
-            src="/tabere-graduates.png"
+            src={assetPath("/tabere-graduates.png")}
             alt="Tabere Methodist Junior High School graduates and staff"
           />
           <div className="photo-caption">
@@ -99,7 +104,7 @@ export default function Home() {
         </p>
         <div className="leader-card">
           <img
-            src="/tabere-crest.png"
+            src={assetPath("/tabere-crest.png")}
             alt="Tabere Methodist Junior High School crest"
           />
           <div>
@@ -160,7 +165,7 @@ export default function Home() {
         </div>
         <figure className="study-highlight">
           <img
-            src="/tabere-study-group.png"
+            src={assetPath("/tabere-study-group.png")}
             alt="Tabere Methodist Junior High School students reading from a notebook"
           />
           <figcaption>
@@ -191,7 +196,7 @@ export default function Home() {
         </div>
         <figure className="student-life">
           <img
-            src="/tabere-students.png"
+            src={assetPath("/tabere-students.png")}
             alt="Tabere Methodist Junior High School students celebrating together"
           />
           <figcaption>
@@ -251,7 +256,7 @@ export default function Home() {
           <div className="contact-card">
             <img
               className="contact-crest"
-              src="/tabere-crest.png"
+              src={assetPath("/tabere-crest.png")}
               alt="Tabere Methodist Junior High School crest"
             />
             <h3>School Location</h3>
