@@ -287,14 +287,55 @@ p {
   text-transform: uppercase;
 }
 
-.ticker div {
+.ticker-window {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.ticker-track {
+  animation: ticker-marquee 26s linear infinite;
   display: flex;
-  gap: 36px;
   min-width: max-content;
+  will-change: transform;
+}
+
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 36px;
+  padding-right: 36px;
 }
 
 .ticker span {
+  flex: 0 0 auto;
   font-weight: 700;
+}
+
+@keyframes ticker-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .ticker-group {
+    flex-wrap: wrap;
+  }
 }
 
 .section-band,
@@ -678,6 +719,10 @@ footer span {
   .ticker {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .ticker-window {
+    width: 100%;
   }
 
   .subject-grid {

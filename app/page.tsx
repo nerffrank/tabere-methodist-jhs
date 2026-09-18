@@ -82,16 +82,26 @@ export default function Home() {
 
       <section className="ticker" aria-label="School announcements">
         <strong>Notices</strong>
-        <div>
-          {announcements.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
+        <div className="ticker-window">
+          <div className="ticker-track">
+            {[0, 1].map((group) => (
+              <div
+                className="ticker-group"
+                key={group}
+                aria-hidden={group === 1}
+              >
+                {announcements.map((item) => (
+                  <span key={`${group}-${item}`}>{item}</span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="welcome section-band">
         <div className="section-heading">
-          <p className="eyebrow">Principal's welcome</p>
+          <p className="eyebrow">Principal&apos;s welcome</p>
           <h2>A safe, challenging, and supportive learning environment</h2>
         </div>
         <p>
