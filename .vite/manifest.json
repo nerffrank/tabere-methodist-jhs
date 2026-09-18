@@ -1,0 +1,38 @@
+{
+  "_framework-804MtLvi.js": {
+    "file": "tabere-methodist-jhs/_next/static/chunks/framework-804MtLvi.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-UUzm_H5e.js"
+    ]
+  },
+  "_rolldown-runtime-UUzm_H5e.js": {
+    "file": "tabere-methodist-jhs/_next/static/chunks/rolldown-runtime-UUzm_H5e.js",
+    "name": "rolldown-runtime"
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "tabere-methodist-jhs/_next/static/chunks/layout-segment-context-BYn89pya.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-UUzm_H5e.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-804MtLvi.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "tabere-methodist-jhs/_next/static/chunks/index-BrkG8gEy.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-UUzm_H5e.js",
+      "_framework-804MtLvi.js"
+    ],
+    "dynamicImports": [
+      "virtual:vinext-app-browser-entry",
+      "node_modules/vinext/dist/shims/layout-segment-context.js"
+    ]
+  }
+}
