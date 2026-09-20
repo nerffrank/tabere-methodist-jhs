@@ -517,8 +517,7 @@ p {
 .feature-row article,
 .student-life,
 .admissions-grid article,
-.contact-card,
-.inquiry-form {
+.contact-card {
   animation: fade-up 0.75s ease both;
 }
 
@@ -835,8 +834,7 @@ footer span {
   .feature-row article,
   .student-life,
   .admissions-grid article,
-  .contact-card,
-  .inquiry-form {
+  .contact-card {
     animation-duration: 0.85s;
     animation-range: entry 8% cover 28%;
     animation-timeline: view();
