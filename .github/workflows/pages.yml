@@ -36,7 +36,7 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           NEXT_PUBLIC_BASE_PATH: /tabere-methodist-jhs
-          NEXT_PUBLIC_SITE_URL: https://nerffrank.github.io/tabere-methodist-jhs
+          NEXT_PUBLIC_SITE_URL: https://tabere-methodist-jhs.org
 
       - name: Place framework assets for GitHub Pages
         run: cp -R dist/client/tabere-methodist-jhs/_next dist/client/_next
