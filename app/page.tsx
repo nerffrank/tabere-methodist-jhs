@@ -277,6 +277,11 @@ export default function Home() {
               Headmaster: Prince Owusu Asante
               <br />
               Phone: <a href="tel:+233549131522">+233 54 913 1522</a>
+              <br />
+              Email:{" "}
+              <a href="mailto:office@tabere-methodist-jhs.org">
+                office@tabere-methodist-jhs.org
+              </a>
             </p>
             <p className="location-note">
               Located northwest of the regional capital, Kumasi, near the
@@ -298,7 +303,12 @@ export default function Home() {
               View larger map
             </a>
           </div>
-          <form className="inquiry-form">
+          <form
+            className="inquiry-form"
+            action="mailto:office@tabere-methodist-jhs.org"
+            method="post"
+            encType="text/plain"
+          >
             <label>
               Full name
               <input name="name" type="text" placeholder="Parent or guardian name" />
@@ -318,16 +328,22 @@ export default function Home() {
             </label>
             <label>
               Message
-              <textarea name="message" placeholder="How can the school help?" />
+              <textarea
+                name="message"
+                placeholder="How can the school help?"
+              />
             </label>
-            <button type="submit">Send Enquiry</button>
+            <button type="submit">Email the Office</button>
           </form>
         </div>
       </section>
 
       <footer>
         <strong>Tabere Methodist Junior High School</strong>
-        <span>Discipline and hard work. Call +233 54 913 1522.</span>
+        <span>
+          Discipline and hard work. Email office@tabere-methodist-jhs.org or
+          call +233 54 913 1522.
+        </span>
       </footer>
     </main>
   );
